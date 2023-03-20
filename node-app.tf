@@ -111,7 +111,7 @@ resource "aws_elb" "elb1" {
   connection_draining = true
   connection_draining_timeout = 400
 
-  tags {
-    Name = "terraform - elb - node-app"
-  }
+  # tags {
+  #   Name = "terraform - elb - node-app"
+  # }
 }
