@@ -88,7 +88,7 @@ data "aws_availability_zones" "allzones" {}
 
 resource "aws_elb" "elb1" {
   name = "terraform-elb-node-app"
-  availability_zones = ["${data.aws_availability_zones.allzones.names}"]
+  availability_zones = ["eu-central-1a", "eu-central-1b"]
   security_groups = ["${aws_security_group.elbsg.id}"]
   
   listener {
