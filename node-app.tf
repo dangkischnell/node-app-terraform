@@ -1,10 +1,12 @@
 # variable "access_key" {}
 # variable "secret_key" {}
-
+terraform {
+  required_version = ">= 0.14"
+}
 provider "aws" {
   # access_key = "${var.access_key}"
   # secret_key = "${var.secret_key}"
-  region     = "eu-central-a"
+  region     = "eu-central-1"
 }
 
 data "aws_ami" "node_app_ami" {
