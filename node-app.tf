@@ -37,7 +37,7 @@ resource "aws_launch_configuration" "node_app_lc" {
 resource "aws_autoscaling_group" "node_app_asg" {
   name                 = "terraform-asg-node-app-${aws_launch_configuration.node_app_lc.name}"
   launch_configuration = "${aws_launch_configuration.node_app_lc.name}"
-  availability_zones = ["${data.aws_availability_zones.allzones.names}"]
+  availability_zones = ["eu-central-1a", "eu-central-1b"]
   min_size             = 1
   max_size             = 2
 
