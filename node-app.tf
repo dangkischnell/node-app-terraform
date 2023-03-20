@@ -22,7 +22,7 @@ data "aws_ami" "node_app_ami" {
     values = ["hvm"]
   }
 
-  owners = ["015583679202"]
+  owners = ["915258950910"]
 }
 
 resource "aws_launch_configuration" "node_app_lc" {
